@@ -4,6 +4,7 @@ installation and arm-none-eabi toolchain.
 Installation Stuff folder contains the Eclipse_Mobots.app and its ReadMe.txt
 Plugin Stuff folder contains the plugin EmbSysRegView for Eclipse.app 
 Eclipse_Mobots_Model.sparseimage is a model of the distribution dmg file
+Worspace.zip contains the Workspace for Eclipse
 
 Unlike Windows and Linux versions, we can create an application bundle without having to have an executable file.
 
@@ -35,14 +36,17 @@ Steps to prepare Eclipse :
 5)	Copy everything inside the Plugin Stuff folder into the plugin folder of the 
 	freshly copied Eclipse.app.
 	Eclipse.app -> Contents -> Eclipse -> plugins
-6)	Download arm-none-eabi toolchain and unzip it into the Tools folder of the
+6) 	Unzip Workspace.zip and copy the Workspace folder next to the Tools folder
+	of Eclipse_Mobots.app
+	Eclipse_Mobots.app -> Contents -> Eclipse_Mobots
+7)	Download arm-none-eabi toolchain and unzip it into the Tools folder of the
 	Eclipse_Mobots.app 
 	Eclipse_Mobots.app -> Contents -> Eclipse_Mobots -> Tools
-5)	Open the Eclipse_Mobots script with a text editor and verify if the paths are 	correct for your installation.
-6)	Execute Eclipse_Mobots.app and install thought the menu 
+8)	Open the Eclipse_Mobots script with a text editor and verify if the paths are 	correct for your installation.
+9)	Execute Eclipse_Mobots.app and install thought the menu 
 	« Help -> Install new software » the plugin C/C++ GDB Hardware Debugging 
 	located in CDT Optional Features
-6)	It’s done
+10)	It’s done
 
 Steps to create a dmg file to distribute Eclipse_Mobots.app
 1)	Copy Eclipse_Mobots_Model.sparseimage somewhere and open the copied image

@@ -2,6 +2,7 @@ This folder contains all the modifications to make to an Eclipse installation to
 installation and arm-none-eabi toolchain.
 
 Installation Stuff folder contains all the stuff to copy into a new Eclipse_Mobots folder
+Workspace.zip contains the workspace for Eclipse
 
 The executable "Eclipse_Mobots" is made trough a Code::Blocks project named « Launcher »
 It simply executes the Eclipse_Mobots.sh script localized in 
@@ -29,11 +30,13 @@ Steps to prepare Eclipse :
 	Eclipse_Mobots folder. Check merge if asked.
 4)	Download arm-none-eabi toolchain and unzip it into the Tools folder of the 
 	new Eclipse_Mobots folder.
-5)	Edit the Eclipse_Mobots.sh script and verify if the paths are correct for 
+5)	Unzip Workspace.zip and copy the Workspace folder next to the Tools folder
+	of Eclipse_Mobots
+6)	Edit the Eclipse_Mobots.sh script and verify if the paths are correct for 
 	your installation.
-6)	Execute Eclipse_Mobots and install thought the menu 
+7)	Execute Eclipse_Mobots and install thought the menu 
 	Help -> Install new software the plugin C/C++ GDB Hardware Debugging located
 	in CDT Optional Features
-6)	It’s done
+8)	It’s done
 
 Compress in tar.gz file the folder Eclipse_Mobots, rename it and distribute it.

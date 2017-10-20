@@ -1,7 +1,13 @@
-﻿This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. It is a comports everything except Eclipse
+﻿This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. 
+It comports everything except Eclipse 
 installation and arm-none-eabi toolchain.
 
+
+
 Installation Stuff folder contains all the stuff to copy into a new Eclipse_Mobots folder
+
+
+Workspace.zip contains the workspace for Eclipse
 
 The executable "Eclipse_Mobots.exe" is made trough a Code::Blocks project named
 « Launcher »
@@ -41,17 +47,21 @@ Steps to prepare Eclipse :
  
 	new Eclipse_Mobots folder.
 
-5)	Edit the Eclipse_Mobots.bat script and verify if the paths are correct for
+
+5)	Unzip Workspace.zip and copy the Workspace folder next to the Tools folder
+ of Eclipse_Mobots
+
+6)	Edit the Eclipse_Mobots.bat script and verify if the paths are correct for
  
 	your installation.
 
-6)	Execute Eclipse_Mobots.exe and install thought the menu
+7)	Execute Eclipse_Mobots.exe and install thought the menu
  
 	Help -> Install new software the plugin C/C++ GDB Hardware Debugging located
 
 	in CDT Optional Features
 
-6)	It’s done
+8)	It’s done
 
 
 
