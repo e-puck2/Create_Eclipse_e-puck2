@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+export PATH=`/usr/libexec/java_home -v 1.8`/bin:$PATH
+export PATH=$dir/../Eclipse_Mobots/Tools/gcc-arm-none-eabi-5_4-2016q3/bin:$PATH
+
+open $dir/../Eclipse_Mobots/eclipse.app --args -data $dir/../Eclipse_Mobots/Workspace
