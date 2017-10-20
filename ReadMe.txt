@@ -1,4 +1,5 @@
-Each Eclipse_Mobots folder has the same structure.
+Each Eclipse_Mobots folder has more or less the same structure.
+
 It is composed of:
 1) eclipse folder which contains the eclipse package with the plugins
 2) Tools folder which contains dedicated tools needed by the platform (toolchain, make, etc)
