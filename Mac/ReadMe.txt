@@ -27,6 +27,9 @@ Here is the directory structure to respect:
 -ReadMe.txt		<- ReadMe containing the how to use for the final user
 
 Steps to prepare Eclipse : 
+
+Execute the script « Create Eclipse_Mobots.sh » or follow the instructions below :
+
 1) 	Create a folder named Eclipse_Mobots
 2) 	Copy paste the everything located in the Installation Stuff folder to the new 
 	Eclipse_Mobots folder.
@@ -49,6 +52,9 @@ Steps to prepare Eclipse :
 10)	It’s done
 
 Steps to create a dmg file to distribute Eclipse_Mobots.app
+
+Execute the script « Create DMG image.sh » or follow the instructions below :
+
 1)	Copy Eclipse_Mobots_Model.sparseimage somewhere and open the copied image
 2)	Open the volume Eclipse_mobots which should have appeared
 3) 	Copy into it what is contained in the folder Eclipse_Mobots we created 
