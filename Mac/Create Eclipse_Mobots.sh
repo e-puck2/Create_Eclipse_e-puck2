@@ -3,18 +3,23 @@
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo
+echo
+echo WARNING All the paths you give must be correct
+echo otherwise unpredictable behaviors could happen
+echo 
 echo Enter the path to the folder where you want 
 echo to generate the Eclipse_Mobots folder and press [ENTER]
 
 read installation_dir
 
 echo
-echo Enter the path to the Eclipse.app you want to use
+echo Enter the path to the Eclipse.app you want to use and press [ENTER]
 
 read eclipse_path
 
 echo
-echo Enter the path to the arm-none-eabi toolchain folder you want to use
+echo Enter the path to the arm-none-eabi toolchain folder you want to use 
+echo and press [ENTER]
 
 read gcc_path
 gcc_folder_name=`basename "$gcc_path"`
@@ -49,7 +54,7 @@ echo
 echo Installing the Hardware Debugging plugin
 echo Please authorize the opening of Ecipse if asked
 
-open -W $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/eclipse.app --args \
+$installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/eclipse.app/Contents/MacOS/eclipse \
 -clean -purgeHistory \
 -application org.eclipse.equinox.p2.director \
 -noSplash \
