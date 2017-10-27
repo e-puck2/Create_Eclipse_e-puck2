@@ -6,6 +6,9 @@ echo
 echo
 echo WARNING All the paths you give must be correct
 echo otherwise unpredictable behaviors could happen
+echo
+echo You can drag and drop every file of folder in the terminal to 
+echo give their path
 echo 
 echo Enter the path to the folder where you want 
 echo to generate the Eclipse_Mobots folder and press [ENTER]
@@ -70,8 +73,6 @@ unzip -q $current_dir/Workspace.zip -d $installation_dir/Eclipse_Mobots/Eclipse_
 rm -rf $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/__MACOSX
 
 echo Workspace unzipped
-echo
-echo
 
 echo
 echo Configuring the PATH to the arm-none-eabi folder given
