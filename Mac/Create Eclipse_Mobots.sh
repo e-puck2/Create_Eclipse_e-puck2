@@ -6,6 +6,7 @@ echo
 echo
 echo WARNING All the paths you give must be correct
 echo otherwise unpredictable behaviors could happen
+echo Spaces in the paths are not allowed
 echo
 echo You can drag and drop every file of folder in the terminal to 
 echo give their path
@@ -80,4 +81,5 @@ sed -i "" '11 c\
 export PATH=$dir/../Eclipse_Mobots/Tools/'"$gcc_folder_name"'/bin:$PATH
 ' $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/MacOS/Eclipse_Mobots
 
+echo
 echo Finished

@@ -7,6 +7,7 @@ echo
 echo
 echo WARNING All the paths you give must be correct
 echo otherwise unpredictable behaviors could happen
+echo Spaces in the paths are not allowed
 echo
 echo You can drag and drop every file of folder in the terminal to 
 echo give their path

@@ -3,7 +3,16 @@
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo
+echo
+echo WARNING All the paths you give must be correct
+echo otherwise unpredictable behaviors could happen
+echo Spaces in the paths are not allowed
+echo
+echo You can drag and drop every file of folder in the terminal to 
+echo give their path
+echo
 echo Enter the path to the folder containing the Eclipse_Mobots folder
+echo and press [ENTER]
 
 read installation_dir
 
@@ -23,4 +32,7 @@ echo Compressing the image
 hdiutil convert -format UDZO -o $installation_dir/Eclipse_Mobots.dmg $installation_dir/Eclipse_Mobots_Model.sparseimage
 
 rm $installation_dir/Eclipse_Mobots_Model.sparseimage
+
+echo
+echo Finished
 
