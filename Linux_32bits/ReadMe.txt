@@ -23,6 +23,9 @@ Here is the directory structure to respect:
 --ReadMe.txt		<- ReadMe containing the how to use for the final user
 
 Steps to prepare Eclipse : 
+
+Execute the script « Create Eclipse_Mobots.sh » or follow the instructions below :
+
 1) 	Create a folder named Eclipse_Mobots
 2)  	Download Eclipse IDE for C/C++ Developers archive version and unzip it into
 	the new Eclipse_Mobots folder. You should obtain an eclipse folder.
