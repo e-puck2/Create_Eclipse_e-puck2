@@ -29,7 +29,7 @@ hdiutil eject "/Volumes/Eclipse_Mobots"
 
 echo
 echo Compressing the image
-hdiutil convert -format UDZO -o $installation_dir/Eclipse_Mobots.dmg $installation_dir/Eclipse_Mobots_Model.sparseimage
+hdiutil convert -format UDZO -o $installation_dir/Eclipse_Mobots_Mac.dmg $installation_dir/Eclipse_Mobots_Model.sparseimage
 
 rm $installation_dir/Eclipse_Mobots_Model.sparseimage
 
