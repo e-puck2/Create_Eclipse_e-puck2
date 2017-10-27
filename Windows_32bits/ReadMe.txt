@@ -25,6 +25,7 @@ Here is the directory structure to respect:
 
 ---plugins		<- Folder made by Eclipse containing its plugins
 ---Eclipse_Mobots.bat	<- Script to launch Eclipse with customized arguments
+---gcc_path.txt		<- Text file containing the path to the gcc folder
 --Tools			<- Folder containing gcc-none-aebi toolchain
 --Workspace		<- Folder containing the Eclipse Parameters
 --Eclipse_Mobots.exe	<- Executable to launch the Eclipse_Mobots.sh script
@@ -52,7 +53,7 @@ Steps to prepare Eclipse :
 5)	Unzip Workspace.zip and copy the Workspace folder next to the Tools folder
  of Eclipse_Mobots
 
-6)	Edit the Eclipse_Mobots.bat script and verify if the paths are correct for
+6)	Edit the gcc_path.txt file and verify if the path is correct for
  
 	your installation.
 
