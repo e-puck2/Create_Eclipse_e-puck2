@@ -1,10 +1,12 @@
-This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. It is a comports everything except Eclipse
+This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. It contains everything except Eclipse
 installation and arm-none-eabi toolchain.
 
-Installation Stuff folder contains the Eclipse_Mobots.app and its ReadMe.txt
-Plugin Stuff folder contains the plugin EmbSysRegView for Eclipse.app 
-Eclipse_Mobots_Model.sparseimage is a model of the distribution dmg file
-Worspace.zip contains the Workspace for Eclipse
+-Installation Stuff folder contains the Eclipse_Mobots.app and its ReadMe.txt
+-Plugin Stuff folder contains the plugin EmbSysRegView for Eclipse.app 
+-Eclipse_Mobots_Model.sparseimage is a model of the distribution dmg file
+-Worspace.zip contains the Workspace for Eclipse
+-Create Eclipse_Mobots.sh is a script which automates the steps to create Eclipse_Mobots
+-Create DMG image.sh is a script which automates the steps to crate the DMG distribution image
 
 Unlike Windows and Linux versions, we can create an application bundle without having to have an executable file.
 
@@ -65,6 +67,6 @@ Execute the script « Create DMG image.sh » or follow the instructions below 
 6)	Choose the Eclipse_Mobots_Model.sparseimage you copied
 7)	Choose a distribution name, where it should be saved, set Encryption to none 
 	and set the image format to compressed.
-8)	You now have a dmg file that can be distribute
+8)	You now have a dmg file that can be distributed
 
 

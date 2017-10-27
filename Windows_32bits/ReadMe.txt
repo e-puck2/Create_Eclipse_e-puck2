@@ -1,13 +1,14 @@
 ﻿This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. 
-It comports everything except Eclipse 
+It contains everything except Eclipse 
 installation and arm-none-eabi toolchain.
 
 
 
-Installation Stuff folder contains all the stuff to copy into a new Eclipse_Mobots folder
+-Installation Stuff folder contains all the stuff to copy into a new Eclipse_Mobots folder
 
 
-Workspace.zip contains the workspace for Eclipse
+-Workspace.zip contains the workspace for Eclipse
+-Create Eclipse_Mobots.bat is a script which automates the steps to create Eclipse_Mobots
 
 The executable "Eclipse_Mobots.exe" is made trough a Code::Blocks project named
 « Launcher »
