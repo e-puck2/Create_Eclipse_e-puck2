@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=`/usr/libexec/java_home -v 1.8`/bin:$PATH
+
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo

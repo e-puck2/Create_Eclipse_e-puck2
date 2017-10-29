@@ -1,4 +1,6 @@
 #!/bin/bash
+export PATH=/usr/lib/jvm/java-8-openjdk-i386/bin:$PATH
+export PATH=/usr/lib/jvm/java-8-openjdk/bin:$PATH
 
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $current_dir

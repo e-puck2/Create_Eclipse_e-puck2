@@ -11,5 +11,6 @@ gvfs-set-attribute -t string $dir/Eclipse_Mobots metadata::custom-icon file:///$
 export PATH=$dir/Tools/gcc-arm-none-eabi-5_4-2016q3/bin:$PATH
 
 export PATH=/usr/lib/jvm/java-8-openjdk-i386/bin:$PATH
+export PATH=/usr/lib/jvm/java-8-openjdk/bin:$PATH
 
 eclipse/eclipse -data Workspace
