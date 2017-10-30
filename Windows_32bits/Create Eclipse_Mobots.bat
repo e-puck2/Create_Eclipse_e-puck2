@@ -31,22 +31,44 @@ echo.
 echo Copying Eclipse
 
 mkdir %installation_dir%\Eclipse_Mobots
+if %errorlevel% neq 0 (
+pause
+exit
+)
 mkdir %installation_dir%\Eclipse_Mobots\eclipse
+if %errorlevel% neq 0 (
+pause
+exit
+)
 xcopy %eclipse_path% %installation_dir%\Eclipse_Mobots\eclipse /s /e /q
+if %errorlevel% neq 0 (
+pause
+exit
+)
 
 echo Eclipse copied
 
 echo.
 echo Copying Instalation stuff to Eclipse_Mobots folder
 xcopy %current_dir%\"Installation Stuff" %installation_dir%\Eclipse_Mobots /s /e /q
-
+if %errorlevel% neq 0 (
+pause
+exit
+)
 echo Installation stuff copied
 
 echo.
 echo Copying arm-none-eabi
 mkdir %installation_dir%\Eclipse_Mobots\Tools\%gcc_folder_name%
+if %errorlevel% neq 0 (
+pause
+exit
+)
 xcopy %gcc_path% %installation_dir%\Eclipse_Mobots\Tools\%gcc_folder_name% /s /e /q
-
+if %errorlevel% neq 0 (
+pause
+exit
+)
 echo arm-none-eabi copied
 
 echo.
@@ -59,21 +81,30 @@ echo Please authorize the opening of Ecipse if asked
 -noSplash ^
 -repository http://download.eclipse.org/tools/cdt/releases/9.3 ^
 -installIUs org.eclipse.cdt.debug.gdbjtag.feature.group
-
+if %errorlevel% neq 0 (
+pause
+exit
+)
 echo Hardware Debugging plugin installed
 
 echo.
 echo Unzipping Workspace
 
 %current_dir%\"Installation Stuff"\Tools\gnutools\bin\7za.exe x %current_dir%\Workspace.zip -o%installation_dir%\Eclipse_Mobots
-
+if %errorlevel% neq 0 (
+pause
+exit
+)
 echo.
 echo Workspace unzipped
 
 echo.
 echo Configuring the PATH to the arm-none-eabi folder given
 echo \tools\%gcc_folder_name%\bin>%installation_dir%\Eclipse_Mobots\eclipse\gcc_path.txt
-
+if %errorlevel% neq 0 (
+pause
+exit
+)
 echo.
 echo Finished
 

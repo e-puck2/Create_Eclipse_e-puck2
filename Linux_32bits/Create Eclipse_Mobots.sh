@@ -38,19 +38,32 @@ echo
 echo Copying Eclipse
 
 mkdir $installation_dir/Eclipse_Mobots
+if [ $? -ne 0 ]; then
+    exit
+fi
+
 cp -R $eclipse_path $installation_dir/Eclipse_Mobots/
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo Eclipse copied
 
 echo
 echo Copying Instalation stuff to Eclipse_Mobots folder
 cp -R $current_dir/Installation\ Stuff/. $installation_dir/Eclipse_Mobots/
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo Installation stuff copied
 
 echo
 echo Copying arm-none-eabi
 cp -R $gcc_path $installation_dir/Eclipse_Mobots/Tools/
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo arm-none-eabi copied
 
@@ -64,6 +77,9 @@ $installation_dir/Eclipse_Mobots/eclipse/eclipse \
 -noSplash \
 -repository http://download.eclipse.org/tools/cdt/releases/9.3 \
 -installIUs org.eclipse.cdt.debug.gdbjtag.feature.group
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo Hardware Debugging plugin installed
 
@@ -71,6 +87,9 @@ echo
 echo Unzipping Workspace
 
 unzip -q $current_dir/Workspace.zip -d $installation_dir/Eclipse_Mobots/
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo Workspace unzipped
 
@@ -79,5 +98,8 @@ echo Configuring the PATH to the arm-none-eabi folder given
 sed -i '11 c\
 export PATH=$dir/Tools/'"$gcc_folder_name"'/bin:$PATH
 ' $installation_dir/Eclipse_Mobots/eclipse/Eclipse_Mobots.sh
+if [ $? -ne 0 ]; then
+    exit
+fi
 
 echo Finished

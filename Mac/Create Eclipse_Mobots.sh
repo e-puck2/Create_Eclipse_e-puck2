@@ -33,27 +33,35 @@ gcc_folder_name=`basename "$gcc_path"`
 echo
 echo Creating Eclipse_Mobots.app
 cp -R $current_dir/Installation\ Stuff/ $installation_dir/Eclipse_Mobots
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo Eclipse_Mobots.app created
 
 echo
 echo Copying Eclipse.app
 
 cp -R $eclipse_path $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo Eclipse.app copied
 
 echo
 echo Copying arm-none-eabi
 cp -R $gcc_path $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/Tools/
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo arm-none-eabi copied
 
 echo
 echo Copying EmbSysRegView plugin
 
 cp -R $current_dir/Plugin\ Stuff/ $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/Eclipse.app/Contents/Eclipse/plugins/
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo EmbSysRegView copied
 
 echo
@@ -66,15 +74,23 @@ $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/ecli
 -noSplash \
 -repository http://download.eclipse.org/tools/cdt/releases/9.3 \
 -installIUs org.eclipse.cdt.debug.gdbjtag.feature.group
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo Hardware Debugging plugin installed
 
 echo
 echo Unzipping Workspace
 
 unzip -q $current_dir/Workspace.zip -d $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/
-rm -rf $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/__MACOSX
+if [ $? -ne 0 ]; then
+    exit
+fi
 
+rm -rf $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/__MACOSX
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo Workspace unzipped
 
 echo
@@ -82,6 +98,8 @@ echo Configuring the PATH to the arm-none-eabi folder given
 sed -i "" '11 c\
 export PATH=$dir/../Eclipse_Mobots/Tools/'"$gcc_folder_name"'/bin:$PATH
 ' $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/MacOS/Eclipse_Mobots
-
+if [ $? -ne 0 ]; then
+    exit
+fi
 echo
 echo Finished
