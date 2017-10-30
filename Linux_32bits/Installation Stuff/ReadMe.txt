@@ -32,3 +32,9 @@ sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jre
 
+**If Eclipse_Mobots says « Could not open serial port /dev/tty* » when trying to debug, you have to type the following command in the terminal to put your user into the dialout group.
+
+« sudo adduser $USER dialout »
+
+Then restart your linux session and it should works.
+
