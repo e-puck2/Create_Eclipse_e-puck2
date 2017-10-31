@@ -16,37 +16,33 @@ echo to generate the Eclipse_Mobots folder and press [ENTER]
 set /p installation_dir=
 
 echo.
-echo Enter the path to the eclipse folder you want to use and press [ENTER]
+echo Enter the path to the eclipse zip file you want to use and press [ENTER]
 
 set /p eclipse_path=
 
 echo.
-echo Enter the path to the arm-none-eabi toolchain folder you want to use 
+echo Enter the path to the arm-none-eabi toolchain zip file you want to use 
 echo and press [ENTER]
 
 set /p gcc_path=
 for %%a in ("%gcc_path%") do set "gcc_folder_name=%%~na"
 
 echo.
-echo Copying Eclipse
+echo Extracting Eclipse
 
 mkdir %installation_dir%\Eclipse_Mobots
 if %errorlevel% neq 0 (
 pause
 exit
 )
-mkdir %installation_dir%\Eclipse_Mobots\eclipse
-if %errorlevel% neq 0 (
-pause
-exit
-)
-xcopy %eclipse_path% %installation_dir%\Eclipse_Mobots\eclipse /s /e /q
+
+%current_dir%\"Installation Stuff"\Tools\gnutools\bin\7za.exe x %eclipse_path% -o%installation_dir%\Eclipse_Mobots
 if %errorlevel% neq 0 (
 pause
 exit
 )
 
-echo Eclipse copied
+echo Eclipse extracted
 
 echo.
 echo Copying Instalation stuff to Eclipse_Mobots folder
@@ -58,18 +54,18 @@ exit
 echo Installation stuff copied
 
 echo.
-echo Copying arm-none-eabi
+echo Extracting arm-none-eabi
 mkdir %installation_dir%\Eclipse_Mobots\Tools\%gcc_folder_name%
 if %errorlevel% neq 0 (
 pause
 exit
 )
-xcopy %gcc_path% %installation_dir%\Eclipse_Mobots\Tools\%gcc_folder_name% /s /e /q
+%current_dir%\"Installation Stuff"\Tools\gnutools\bin\7za.exe x %gcc_path% -o%installation_dir%\Eclipse_Mobots\Tools\%gcc_folder_name%
 if %errorlevel% neq 0 (
 pause
 exit
 )
-echo arm-none-eabi copied
+echo arm-none-eabi extracted
 
 echo.
 echo Installing the Hardware Debugging plugin
