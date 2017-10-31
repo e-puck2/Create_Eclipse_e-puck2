@@ -19,16 +19,16 @@ echo to generate the Eclipse_Mobots folder and press [ENTER]
 read installation_dir
 
 echo
-echo Enter the path to the Eclipse.app you want to use and press [ENTER]
+echo Enter the path to the Eclipse DMG file you want to use and press [ENTER]
 
 read eclipse_path
 
 echo
-echo Enter the path to the arm-none-eabi toolchain folder you want to use 
+echo Enter the path to the arm-none-eabi toolchain tar file you want to use 
 echo and press [ENTER]
 
 read gcc_path
-gcc_folder_name=`basename "$gcc_path"`
+gcc_folder_name=`tar -tzf $gcc_path | head -1 | cut -f1 -d"/"`
 
 echo
 echo Creating Eclipse_Mobots.app
@@ -40,20 +40,29 @@ echo Eclipse_Mobots.app created
 
 echo
 echo Copying Eclipse.app
+hdiutil mount $eclipse_path
+if [ $? -ne 0 ]; then
+    exit
+fi
 
-cp -R $eclipse_path $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/
+cp -R /Volumes/Eclipse/eclipse.app $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/
+if [ $? -ne 0 ]; then
+    exit
+fi
+
+hdiutil eject "/Volumes/Eclipse"
 if [ $? -ne 0 ]; then
     exit
 fi
 echo Eclipse.app copied
 
 echo
-echo Copying arm-none-eabi
-cp -R $gcc_path $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/Tools/
+echo Extracting arm-none-eabi
+tar -zxf $gcc_path -C $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app/Contents/Eclipse_Mobots/Tools/
 if [ $? -ne 0 ]; then
     exit
 fi
-echo arm-none-eabi copied
+echo arm-none-eabi extracted
 
 echo
 echo Copying EmbSysRegView plugin
