@@ -3,7 +3,6 @@ export PATH=/usr/lib/jvm/java-8-openjdk-i386/bin:$PATH
 export PATH=/usr/lib/jvm/java-8-openjdk/bin:$PATH
 
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo $current_dir
 
 echo
 echo
@@ -21,18 +20,18 @@ read installation_dir
 installation_dir=$(echo $installation_dir | sed "s/'//g")
 
 echo
-echo Enter the path to the eclipse folder you want to use and press [ENTER]
+echo Enter the path to the eclipse tar file you want to use and press [ENTER]
 
 read eclipse_path
 eclipse_path=$(echo $eclipse_path | sed "s/'//g")
 
 echo
-echo Enter the path to the arm-none-eabi toolchain folder you want to use
+echo Enter the path to the arm-none-eabi toolchain tar file you want to use
 echo and press [ENTER]
 
 read gcc_path
 gcc_path=$(echo $gcc_path | sed "s/'//g")
-gcc_folder_name=`basename "$gcc_path"`
+gcc_folder_name=`tar -tjf $gcc_path | head -1 | cut -f1 -d"/"`
 
 echo
 echo Copying Eclipse
@@ -42,7 +41,7 @@ if [ $? -ne 0 ]; then
     exit
 fi
 
-cp -R $eclipse_path $installation_dir/Eclipse_Mobots/
+tar -zxf $eclipse_path -C $installation_dir/Eclipse_Mobots/
 if [ $? -ne 0 ]; then
     exit
 fi
@@ -60,7 +59,7 @@ echo Installation stuff copied
 
 echo
 echo Copying arm-none-eabi
-cp -R $gcc_path $installation_dir/Eclipse_Mobots/Tools/
+tar -jxf $gcc_path -C $installation_dir/Eclipse_Mobots/Tools/
 if [ $? -ne 0 ]; then
     exit
 fi
