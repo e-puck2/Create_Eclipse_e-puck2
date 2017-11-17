@@ -12,6 +12,7 @@ Content of Eclipse (all platforms)
 -Plugins
 --C/C++ GDB Hardware Debugging
 --EmbSysRegView 0.2.6 (with custom SVD)
+—-ChibiOs board config generator tool 1.10.1 (with custom template aka. stm32f4xx_e-puck2)
 
 Configuration made into eclipse (kept in the Workspace)
 -debugger is configured to work with a BlackMagic Probe
