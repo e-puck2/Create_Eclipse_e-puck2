@@ -1,21 +1,21 @@
-This folder contains all the modifications to make to an Eclipse installation to prepare it for e-puck 2 programming. It contains everything except Eclipse
+This folder contains all the modifications to prepare an Eclipse installation for e-puck 2 programming. It contains everything except Eclipse
 installation and arm-none-eabi toolchain.
 
--Installation Stuff folder contains the Eclipse_Mobots.app and its ReadMe.txt
--Plugin Stuff folder contains the plugin EmbSysRegView for Eclipse.app 
--Eclipse_Mobots_Model.sparseimage is a model of the distribution dmg file
--Worspace.zip contains the Workspace for Eclipse
--Create Eclipse_Mobots.sh is a script which automates the steps to create Eclipse_Mobots
--Create DMG image.sh is a script which automates the steps to crate the DMG distribution image
+-"Installation Stuff" folder contains the Eclipse_Mobots.app and its ReadMe.txt
+-"Plugin Stuff" folder contains the plugin EmbSysRegView for Eclipse.app 
+-"Eclipse_Mobots_Model.sparseimage" is a model of the distribution dmg file
+-"Worspace.zip" contains the preconfigured Workspace for Eclipse
+-"Create Eclipse_Mobots.sh" is a script which automates the steps to create Eclipse_Mobots
+-"Create DMG image.sh" is a script which automates the steps to crate the DMG distribution image
 
-Unlike Windows and Linux versions, we can create an application bundle without having to have an executable file.
+Unlike Windows and Linux versions, we can create an application bundle without the need to have an executable file.
 
 The Eclipse_Mobots.app contains a script localized in 
 Eclipse_Mobots.app -> Contents -> MacOS -> Eclipse_Mobots which is executed when double-clicking on the app. It behaves like an executable.
 
 Here is the directory structure to respect:
 
--Eclipse_Mobots	.app	<- Eclipse Mobots main directory (seen like an application)
+-Eclipse_Mobots.app	<- Eclipse Mobots main directory (seen like an application)
 —-Contents		<- Folder
 ——-MacOS		<- Folder containing the script launched when opening the app
 ———-Eclipse_Mobots	<- Script to launch Eclipse with customized arguments
@@ -24,7 +24,7 @@ Here is the directory structure to respect:
 ————-Contents		<- Folder
 —————-Eclipse		<- Folder
 ——————-plugins		<- Folder made by Eclipse containing its plugins
-———-Tools		<- Folder containing gcc-none-aebi toolchain
+———-Tools		<- Folder containing gcc-none-eabi toolchain
 ———-Workspace		<- Folder containing the Eclipse Parameters
 -ReadMe.txt		<- ReadMe containing the how to use for the final user
 

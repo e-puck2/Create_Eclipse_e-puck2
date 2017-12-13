@@ -20,7 +20,7 @@ If the following message
 « Unable to open "Eclipse_Mobots.app" because this app comes from an unidentified developer. » 
 appears when double-clicking on Eclipse_Mobots or if 
 « "Eclipse.app" is corrupted and can not be opened. You should place this item in the Trash. »
-appears, it is necessary to go to System Preferences->security and privacy->General and authorize downloaded application from anywhere. It should now be possible to launch Eclipse_Mobots. After the first successful launch, the setting can be set back to its original value because now, the application is trusted. During the first launch is longer because of Gatekeeper, and it is possible to see two times Eclipse on the Dock. This is because we use an Eclipse_mobots.app to launch Eclipse.app with some custom parameters.
+appears, it is necessary to go to System Preferences->security and privacy->General and authorize downloaded application from anywhere. It should now be possible to launch Eclipse_Mobots. After the first successful launch, the setting can be set back to its original value because now, the application is trusted. The first launch of Eclipse_Mobots is longer because of Gatekeeper, and it is possible to see two times Eclipse on the Dock. This is because we use an Eclipse_mobots.app which launches Eclipse.app with some custom parameters.
 
 !!!! Important !!!!
 On MacOs Sierra or above, it is not possible anymore to select « anywhere » in the security preferences.
