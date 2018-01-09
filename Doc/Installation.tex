@@ -1,0 +1,237 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+
+% draft watermark
+% \usepackage{draftwatermark}
+% \SetWatermarkScale{4}
+
+% todo annotations
+\usepackage{todonotes}
+
+\addtolength{\textwidth}{3cm}
+\addtolength{\oddsidemargin}{-1.5cm}
+\addtolength{\evensidemargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+\addtolength{\topmargin}{-1.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+\pagestyle{plain}
+
+% code listing style
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    tabsize=4,
+    keepspaces=true,
+    columns=flexible,
+    % backgroundcolor=\color[gray]{0.9},
+    frame=single
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Macros that are filled into the standard text:
+
+%% Things that change for each project:
+
+\newcommand{\Title}{Eclipse\_Mobots Installation}
+\newcommand{\Fulltitle}{Installation of an Eclipse distribution to work with the e-puck2}
+\newcommand{\Duration}{5-20 min}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% You won't need to edit anything until the next
+%% big remark...
+
+\begin{document}
+
+\raisebox{10mm}{%
+ % \footnotesize
+  \begin{tabular}{@{\hspace{0pt}}l@{\hspace{0pt}}}
+   \textbf{Cours de MICROINFORMATIQUE}\\
+   Section de Microtechnique\\
+    \raisebox{5mm}{Printemps 2017}\\
+    \hline
+    \raisebox{-1.2ex}{Practical Exercises}
+  \end{tabular}%
+}
+\hfill
+\includegraphics[width=0.3\columnwidth]{fig/logo_epfl_gray.pdf}
+
+\begin{center}
+\begin{tabular}{|*{1}{p{0.15\columnwidth}p{0.75\columnwidth}}|}
+  \hline
+  \multicolumn{2}{|c|}{%
+    \raisebox{0pt}[3ex]{\textbf{\Title}}}\\
+  \hline
+  \raisebox{0pt}[3ex]{\textbf{Title:}}       & \Fulltitle \\
+  \raisebox{0pt}[3ex]{\textbf{Duration:}}       & \Duration \\
+  \hline
+\end{tabular}
+\end{center}
+
+
+%-------------------------------------------------------------------------------
+\section{Introduction}
+Eclipse\_Mobots is a distribution of Eclipse IDE for C/C++ Developers specially modified to edit and compile e-puck2's projects out of the box. It doens't require to be installed and everything needed is located in the package given.
+
+The only dependency needed to be able to run Eclipse is Java.
+
+\section{Installation for Windows}
+
+
+\subsection{Java 32bits}
+This section can be ignored if Java 32bits is already installed on your computer.
+
+\begin{enumerate}
+\item Go to https://www.java.com/en/download/manual.jsp and download "Windows offline" This is the 32bits version of Java
+\item Run the downloaded installer and follow its intructions to proceed with the installation of Java 32bits
+\end{enumerate}
+
+
+\subsection{Eclipse\_Mobots}
+
+\begin{enumerate}
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for windows.
+\item Unzip the downloaded file to the location you want (can take time). 
+\item You can now run the Eclipse\_Mobots.exe to launch Eclipse.
+\item You can create a shortcut to Eclipse\_Mobots.exe and place it anywhere if you want.
+\end{enumerate}
+
+\textbf{Important things to avoid :}
+
+\begin{enumerate}
+\item The path to the Eclipse\_Mobots folder must contain zero space. 
+
+Example :
+
+C:\textbackslash epfl\_stuff\textbackslash Eclipse\_Mobots   OK
+
+C:\textbackslash epfl stuff\textbackslash Eclipse\_Mobots   NOT OK
+\item The file's structure in the Eclipse\_Mobots folder must remains the same. It means no file inside this folder must be moved to another place.
+\end{enumerate}
+
+\newpage
+\section{Installation for Linux}
+
+\subsection{Java}
+This section can be ignored if Java is already installed on your computer.
+
+\begin{enumerate}
+\item Type the following commands in a terminal session to install Java SDK
+\begin{lstlisting}
+$ sudo add-apt-repository ppa:openjdk-r/ppa
+$ sudo apt-get update
+$ sudo apt-get install openjdk-8-jre
+\end{lstlisting}
+\end{enumerate}
+
+
+\subsection{Eclipse\_Mobots}
+
+\begin{enumerate}
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for Linux.
+Pay attention to the 32bits or 64bits version.
+\item Extract the downloaded file to the location you want (can take time). 
+\item You can now run the Eclipse\_Mobots executable to launch Eclipse.
+\end{enumerate}
+
+\textbf{Important things to avoid :}
+
+\begin{enumerate}
+\item You can not create a Link to the Eclipse\_Mobots executable because otherwise the program will think its location is where the Link is and it will not find the ressources located in the Eclipse\_Mobots folder.
+\item The path to the Eclipse\_Mobots folder must contain zero space. 
+
+Example :
+
+/home/student/epfl\_stuff/Eclipse\_mobots OK   OK
+
+/home/student/epfl stuff/Eclipse\_mobots NOT OK
+
+\item The file's structure in the Eclipse\_Mobots folder must remains the same. It means no file inside this folder must be moved to another place.
+\end{enumerate}
+
+\subsection{Serial Port}
+
+In order to let Eclipse, or any program ran by you to access the serial ports, a little configuration is needed.
+
+Type the following command in a terminal session. Once done, you need to log off to let the change take effect.
+
+\begin{lstlisting}
+$ sudo adduser $USER dialout
+\end{lstlisting}
+
+\newpage
+\section{Installation for Mac}
+
+\subsection{Java}
+This section can be ignored if Java is already installed on your computer.
+
+\begin{enumerate}
+\item Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html and download the Mac OS X Java 8 SE Development Kit. It is the .dgm file \textbf{without} the Demos and Samples.
+For example : jdk-8uXXX-macosx-x64.dmg
+\item Open the .dmg file downloaded, run the installer and follow the instructions to proceed with the installation of Java SDK.
+\end{enumerate}
+
+
+\subsection{Eclipse\_Mobots}
+
+\begin{enumerate}
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for Mac.
+\item Open the .dmg file downloaded and DragAndDrop the Eclipse\_Mobots.app into the Applications folder
+
+Note : You can place the Eclipse\_Mobots.app anywhere, as long a the full path to it doesn't contain any space, if you don't want it to be in Applications.
+\item You can create an Alias to Eclipse\_Mobots.app and place it anywhere if you want.
+\end{enumerate}
+
+\subsection{First launch and Gatekeeper}
+
+It's very likely that Gatekeeper (one of the protectons of Mac OS) will prevent you to launch Eclipse\_Mobots.app because it isn't signed from a known developper. 
+
+If « Unable to open "Eclipse\_Mobots.app" because this app comes from an unidentified developer. »  
+
+or if « "Eclipse.app" is corrupted and can not be opened. You should place this item in the Trash. »
+
+appears after executing the app the first time, it is needed disable temporarily Gatekeeper.
+
+To do so :
+\begin{enumerate}
+\item Go to System Preferences->security and privacy->General and authorize downloaded application from anywhere.
+
+If you are on Mac OS Sierra or greater (> Mac OS 10.12), you must type the following command on the terminal to make the option above appear.
+\begin{lstlisting}
+$ sudo spctl --master-disable
+\end{lstlisting}
+\item Now you can try to run the application and it should work.
+\item If Eclipse opened successfully, it is time to reactivate Gatekeeper. Simply set back the setting of gatekeeper.
+
+For the ones who needed to type a command to disable Gatekeeper, her is the command to reactivate it.
+\begin{lstlisting}
+sudo spctl --master-enable
+\end{lstlisting}
+\end{enumerate}
+
+This procedure is only needed the first time. After that Gatekeeper will remember your choice to let run this application and will not bother you anymore, as long as you use this application. If you re-download it, you will have to redo the procedure for Gatekeeper.
+
+\textbf{Important things to avoid :}
+
+\begin{enumerate}
+\item The path to the Eclipse\_Mobots.app must contain zero space. 
+
+Example :
+
+/home/student/epfl\_stuff/Eclipse\_mobots OK   OK
+
+/home/student/epfl stuff/Eclipse\_mobots NOT OK
+
+\item The file's structure in the Eclipse\_Mobots.app must remains the same. It means no file inside this app must be moved to another place.
+\end{enumerate}
+
+\end{document}
