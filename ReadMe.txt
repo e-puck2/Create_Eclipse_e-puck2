@@ -8,7 +8,7 @@ It is composed of:
 
 Content of Eclipse (all platforms)
 
--Eclipse IDE for C/C++ Developers (Oxygen 4.7.1)
+-Eclipse IDE for C/C++ Developers (Oxygen 4.7.2)
 -Plugins
 --C/C++ GDB Hardware Debugging
 --EmbSysRegView 0.2.6 (with custom SVD)
