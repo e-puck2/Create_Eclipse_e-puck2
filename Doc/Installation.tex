@@ -39,8 +39,8 @@
 
 %% Things that change for each project:
 
-\newcommand{\Title}{Eclipse\_Mobots Installation}
-\newcommand{\Fulltitle}{Installation of an Eclipse distribution to work with the e-puck2}
+\newcommand{\Title}{E-Puck2 environment installation}
+\newcommand{\Fulltitle}{Installation of the e-puck2 environment}
 \newcommand{\Duration}{5-20 min}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
@@ -80,9 +80,14 @@
 
 %-------------------------------------------------------------------------------
 \section{Introduction}
-Eclipse\_Mobots is a distribution of Eclipse IDE for C/C++ Developers specially modified to edit and compile e-puck2's projects out of the box. It doens't require to be installed and everything needed is located in the package given.
+Some programs are needed to program the e-puck2.
+\begin{enumerate}
+\item Eclipse\_Mobots is a distribution of Eclipse IDE for C/C++ Developers specially modified to edit and compile e-puck2's projects out of the box. It doens't require to be installed and everything needed is located in the package given.
 
 The only dependency needed to be able to run Eclipse is Java.
+\item Drivers must also be installed for Windows older than Windows 10.
+
+\end{enumerate}
 
 \section{Installation for Windows}
 
@@ -91,9 +96,17 @@ The only dependency needed to be able to run Eclipse is Java.
 This section can be ignored if Java 32bits is already installed on your computer.
 
 \begin{enumerate}
-\item Go to https://www.java.com/en/download/manual.jsp and download "Windows offline" This is the 32bits version of Java
-\item Run the downloaded installer and follow its intructions to proceed with the installation of Java 32bits
+\item Go to https://www.java.com/en/download/manual.jsp and download "Windows offline" This is the 32bits version of Java.
+\item Run the downloaded installer and follow its intructions to proceed with the installation of Java 32bits.
+\item Close the internet browser if it opened at the end of the installation.
 \end{enumerate}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\columnwidth]{fig/Java_Windows}
+\caption{Java download page}
+\label{fig:Java_windows}
+\end{figure}
 
 
 \subsection{Eclipse\_Mobots}
@@ -101,9 +114,18 @@ This section can be ignored if Java 32bits is already installed on your computer
 \begin{enumerate}
 \item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for windows.
 \item Unzip the downloaded file to the location you want (can take time). 
+
+It is strongly recommanded for better performance and less exctraction time to use 7Zip. You can download it on http://www.7-zip.org.
 \item You can now run the Eclipse\_Mobots.exe to launch Eclipse.
 \item You can create a shortcut to Eclipse\_Mobots.exe and place it anywhere if you want.
 \end{enumerate}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\columnwidth]{fig/Eclipse_Mobots_Folder_Windows}
+\caption{Eclipse\_Mobots folder obtained after extraction}
+\label{fig:Eclipse_Mobots_Folder_Windows}
+\end{figure}
 
 \textbf{Important things to avoid :}
 
@@ -117,6 +139,24 @@ C:\textbackslash epfl\_stuff\textbackslash Eclipse\_Mobots   OK
 C:\textbackslash epfl stuff\textbackslash Eclipse\_Mobots   NOT OK
 \item The file's structure in the Eclipse\_Mobots folder must remains the same. It means no file inside this folder must be moved to another place.
 \end{enumerate}
+
+\subsection{Drivers}
+This part concerns only the users of a Windows version older than Windows 10. The drivers are automatically installed with Windows 10.
+
+\begin{enumerate}
+\item Open zadig-2.3.exe located in the \path{Eclipse_Mobots\Tools\} you installed before.
+\item Connect the e-puck2 with the USB cable and turn it on. Three unknown devices must have appeared in the device list of the program, namely \textbf{e-puck2 STM32F407}, \textbf{e-puck2 GDB Server (Interface 0)} and \textbf{e-puck2 Serial Monitor (Interface 2)}.
+\item For each of the three devices mentioned above, select the \textbf{USB Serial (CDC)} driver and click on the "Install Driver" button to install it. Accept the different prompts which may appear during the process. After that you can simply quit the program and the drivers are installed. These steps are illustrated on Figure \ref{fig:Zadig_e-puck2_STM32F407} below.
+
+Note : The drivers installed are located in \path{C:\Users\"your_user_name"\usb_driver}
+\end{enumerate}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\columnwidth]{fig/Zadig_e-puck2_STM32F407}
+\caption{Example of driver installation for \textbf{e-puck2 STM32F407}}
+\label{fig:Zadig_e-puck2_STM32F407}
+\end{figure}
 
 \newpage
 \section{Installation for Linux}
@@ -142,6 +182,15 @@ Pay attention to the 32bits or 64bits version.
 \item Extract the downloaded file to the location you want (can take time). 
 \item You can now run the Eclipse\_Mobots executable to launch Eclipse.
 \end{enumerate}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\columnwidth]{fig/Eclipse_Mobots_Folder_Linux}
+\caption{Eclipse\_Mobots folder obtained after extraction}
+\label{fig:Eclipse_Mobots_Folder_Linux}
+\end{figure}
+
+Note : The icon of the Eclipse\_Mobots executable will appear after the first launch of the program.
 
 \textbf{Important things to avoid :}
 
@@ -180,6 +229,12 @@ For example : jdk-8uXXX-macosx-x64.dmg
 \item Open the .dmg file downloaded, run the installer and follow the instructions to proceed with the installation of Java SDK.
 \end{enumerate}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\columnwidth]{fig/Java_mac}
+\caption{Java download page}
+\label{fig:Java_mac}
+\end{figure}
 
 \subsection{Eclipse\_Mobots}
 
@@ -195,17 +250,19 @@ Note : You can place the Eclipse\_Mobots.app anywhere, as long a the full path t
 
 It's very likely that Gatekeeper (one of the protectons of Mac OS) will prevent you to launch Eclipse\_Mobots.app because it isn't signed from a known developper. 
 
+If you can't run the program because of a warning of the system. Press OK and try to launch it by right clicking on it and choosing "open" in the contextual menu (may be slow to open the first time).
+
 If « Unable to open "Eclipse\_Mobots.app" because this app comes from an unidentified developer. »  
 
 or if « "Eclipse.app" is corrupted and can not be opened. You should place this item in the Trash. »
 
-appears after executing the app the first time, it is needed disable temporarily Gatekeeper.
+appears after executing the app the first time, it is needed to disable temporarily Gatekeeper.
 
 To do so :
 \begin{enumerate}
-\item Go to System Preferences->security and privacy->General and authorize downloaded application from anywhere.
+\item Go to System Preferences->security and privacy->General and authorize downloaded application from \textbf{Anywhere}.
 
-If you are on Mac OS Sierra or greater (> Mac OS 10.12), you must type the following command on the terminal to make the option above appear.
+If you are on Mac OS Sierra or greater (greater or equal to Mac OS 10.12), you must type the following command on the terminal to make the option above appear.
 \begin{lstlisting}
 $ sudo spctl --master-disable
 \end{lstlisting}
@@ -218,7 +275,16 @@ sudo spctl --master-enable
 \end{lstlisting}
 \end{enumerate}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\columnwidth]{fig/security_tab_mac}
+\caption{Security settings of Mac OS}
+\label{fig:security_tab_mac}
+\end{figure}
+
 This procedure is only needed the first time. After that Gatekeeper will remember your choice to let run this application and will not bother you anymore, as long as you use this application. If you re-download it, you will have to redo the procedure for Gatekeeper.
+
+
 
 \textbf{Important things to avoid :}
 
