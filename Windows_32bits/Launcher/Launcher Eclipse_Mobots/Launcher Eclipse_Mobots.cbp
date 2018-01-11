@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-m32" />
 				</Compiler>
 			</Target>
 			<Target title="Release">

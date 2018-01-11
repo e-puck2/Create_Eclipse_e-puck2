@@ -4,3 +4,10 @@
 
 1507889638 source:c:\users\eliot\desktop\e-puck 2 dev\windows\launcher\launcher eclipse_mobots\ressource.rc
 
+1511430125 source:y:\documents\smartgit\create_eclipse_mobots\windows_32bits\launcher\launcher eclipse_mobots\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1511430125 source:y:\documents\smartgit\create_eclipse_mobots\windows_32bits\launcher\launcher eclipse_mobots\ressource.rc
+
