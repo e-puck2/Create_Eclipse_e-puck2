@@ -1,0 +1,6 @@
+#ifndef _ressource_rc
+#define _ressource_rc
+
+MAINICON ICON "eclipse.ico"
+
+#endif

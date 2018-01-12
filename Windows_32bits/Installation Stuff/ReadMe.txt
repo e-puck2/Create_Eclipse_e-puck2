@@ -1,15 +1,15 @@
-**To use, simply place the folder Eclipse_Mobots where you want. 
+**To use, simply place the folder Eclipse_e-puck2 where you want. 
 It's just needed to have no space in the names of the parents folders.
 
 
 
-Example : 	C:\epfl_stuff\Eclipse_mobots	OK
+Example : 	C:\epfl_stuff\Eclipse_e-puck2	OK
 		
-		C:\epfl stuff\Eclipse_mobots	NOT OK
+		C:\epfl stuff\Eclipse_e-puck2	NOT OK
 
 
 
-Next you can create a shortcut of Eclipse_Mobots.exe if you want.
+Next you can create a shortcut of Eclipse_e-puck2.exe if you want.
 
 
 

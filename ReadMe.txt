@@ -1,10 +1,10 @@
-Each Eclipse_Mobots folder has more or less the same structure.
+Each Eclipse_e-puck2 folder has more or less the same structure.
 
 It is composed of:
 1) eclipse folder which contains the eclipse package with the plugins
 2) Tools folder which contains dedicated tools needed by the platform (toolchain, make, etc)
 3) Workspace folder which contains all the settings of the eclipse package
-4) Eclipse_Mobots executable which launches eclipse with the given Workspace and the PATH needed to use the Tools folder.
+4) Eclipse_e-puck2 executable which launches eclipse with the given Workspace and the PATH needed to use the Tools folder.
 
 Content of Eclipse (all platforms)
 

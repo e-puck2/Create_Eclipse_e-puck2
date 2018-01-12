@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1507900930 source:/home/epfl/Desktop/Launcher/Launcher Eclipse_Mobots/main.cpp
-	<iostream>
-	<stdio.h>
-	<stdlib.h>
-

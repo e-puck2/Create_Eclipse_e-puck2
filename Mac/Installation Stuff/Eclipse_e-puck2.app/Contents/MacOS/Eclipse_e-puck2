@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#do not change the lines numbers without changing them in the Create Eclipse_e-puck2.sh script
+#because it is used to actualise the line with arm-none-eabi
+
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+export PATH=`/usr/libexec/java_home -v 1.8`/bin:$PATH
+
+#below is the line changed by the script
+export PATH=$dir/../Eclipse_e-puck2/Tools/gcc-arm-none-eabi-5_4-2016q3/bin:$PATH
+
+$dir/../Eclipse_e-puck2/eclipse.app/Contents/MacOS/eclipse -data $dir/../Eclipse_e-puck2/Workspace

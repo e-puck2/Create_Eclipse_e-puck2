@@ -82,7 +82,7 @@
 \section{Introduction}
 Some programs are needed to program the e-puck2.
 \begin{enumerate}
-\item Eclipse\_Mobots is a distribution of Eclipse IDE for C/C++ Developers specially modified to edit and compile e-puck2's projects out of the box. It doens't require to be installed and everything needed is located in the package given.
+\item Eclipse\_e-puck2 is a distribution of Eclipse IDE for C/C++ Developers specially modified to edit and compile e-puck2's projects out of the box. It doens't require to be installed and everything needed is located in the package given.
 
 The only dependency needed to be able to run Eclipse is Java.
 \item Drivers must also be installed for Windows older than Windows 10.
@@ -109,42 +109,42 @@ This section can be ignored if Java 32bits is already installed on your computer
 \end{figure}
 
 
-\subsection{Eclipse\_Mobots}
+\subsection{Eclipse\_e-puck2}
 
 \begin{enumerate}
-\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for windows.
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_e-puck2 package for windows.
 \item Unzip the downloaded file to the location you want (can take time). 
 
 It is strongly recommanded for better performance and less exctraction time to use 7Zip. You can download it on http://www.7-zip.org.
-\item You can now run the Eclipse\_Mobots.exe to launch Eclipse.
-\item You can create a shortcut to Eclipse\_Mobots.exe and place it anywhere if you want.
+\item You can now run the Eclipse\_e-puck2.exe to launch Eclipse.
+\item You can create a shortcut to Eclipse\_e-puck2.exe and place it anywhere if you want.
 \end{enumerate}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=1\columnwidth]{fig/Eclipse_Mobots_Folder_Windows}
-\caption{Eclipse\_Mobots folder obtained after extraction}
-\label{fig:Eclipse_Mobots_Folder_Windows}
+\includegraphics[width=1\columnwidth]{fig/Eclipse_e-puck2_Folder_Windows}
+\caption{Eclipse\_e-puck2 folder obtained after extraction}
+\label{fig:Eclipse_e-puck2_Folder_Windows}
 \end{figure}
 
 \textbf{Important things to avoid :}
 
 \begin{enumerate}
-\item The path to the Eclipse\_Mobots folder must contain zero space. 
+\item The path to the Eclipse\_e-puck2 folder must contain zero space. 
 
 Example :
 
-C:\textbackslash epfl\_stuff\textbackslash Eclipse\_Mobots   OK
+C:\textbackslash epfl\_stuff\textbackslash Eclipse\_e-puck2   OK
 
-C:\textbackslash epfl stuff\textbackslash Eclipse\_Mobots   NOT OK
-\item The file's structure in the Eclipse\_Mobots folder must remains the same. It means no file inside this folder must be moved to another place.
+C:\textbackslash epfl stuff\textbackslash Eclipse\_e-puck2   NOT OK
+\item The file's structure in the Eclipse\_e-puck2 folder must remains the same. It means no file inside this folder must be moved to another place.
 \end{enumerate}
 
 \subsection{Drivers}
 This part concerns only the users of a Windows version older than Windows 10. The drivers are automatically installed with Windows 10.
 
 \begin{enumerate}
-\item Open zadig-2.3.exe located in the \path{Eclipse_Mobots\Tools\} you installed before.
+\item Open zadig-2.3.exe located in the \path{Eclipse_e-puck2\Tools\} you installed before.
 \item Connect the e-puck2 with the USB cable and turn it on. Three unknown devices must have appeared in the device list of the program, namely \textbf{e-puck2 STM32F407}, \textbf{e-puck2 GDB Server (Interface 0)} and \textbf{e-puck2 Serial Monitor (Interface 2)}.
 \item For each of the three devices mentioned above, select the \textbf{USB Serial (CDC)} driver and click on the "Install Driver" button to install it. Accept the different prompts which may appear during the process. After that you can simply quit the program and the drivers are installed. These steps are illustrated on Figure \ref{fig:Zadig_e-puck2_STM32F407} below.
 
@@ -174,37 +174,37 @@ $ sudo apt-get install openjdk-8-jre
 \end{enumerate}
 
 
-\subsection{Eclipse\_Mobots}
+\subsection{Eclipse\_e-puck2}
 
 \begin{enumerate}
-\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for Linux.
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_e-puck2 package for Linux.
 Pay attention to the 32bits or 64bits version.
 \item Extract the downloaded file to the location you want (can take time). 
-\item You can now run the Eclipse\_Mobots executable to launch Eclipse.
+\item You can now run the Eclipse\_e-puck2 executable to launch Eclipse.
 \end{enumerate}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=1\columnwidth]{fig/Eclipse_Mobots_Folder_Linux}
-\caption{Eclipse\_Mobots folder obtained after extraction}
-\label{fig:Eclipse_Mobots_Folder_Linux}
+\includegraphics[width=1\columnwidth]{fig/Eclipse_e-puck2_Folder_Linux}
+\caption{Eclipse\_e-puck2 folder obtained after extraction}
+\label{fig:Eclipse_e-puck2_Folder_Linux}
 \end{figure}
 
-Note : The icon of the Eclipse\_Mobots executable will appear after the first launch of the program.
+Note : The icon of the Eclipse\_e-puck2 executable will appear after the first launch of the program.
 
 \textbf{Important things to avoid :}
 
 \begin{enumerate}
-\item You can not create a Link to the Eclipse\_Mobots executable because otherwise the program will think its location is where the Link is and it will not find the ressources located in the Eclipse\_Mobots folder.
-\item The path to the Eclipse\_Mobots folder must contain zero space. 
+\item You can not create a Link to the Eclipse\_e-puck2 executable because otherwise the program will think its location is where the Link is and it will not find the ressources located in the Eclipse\_e-puck2 folder.
+\item The path to the Eclipse\_e-puck2 folder must contain zero space. 
 
 Example :
 
-/home/student/epfl\_stuff/Eclipse\_mobots OK   OK
+/home/student/epfl\_stuff/Eclipse\_e-puck2 OK   OK
 
-/home/student/epfl stuff/Eclipse\_mobots NOT OK
+/home/student/epfl stuff/Eclipse\_e-puck2 NOT OK
 
-\item The file's structure in the Eclipse\_Mobots folder must remains the same. It means no file inside this folder must be moved to another place.
+\item The file's structure in the Eclipse\_e-puck2 folder must remains the same. It means no file inside this folder must be moved to another place.
 \end{enumerate}
 
 \subsection{Serial Port}
@@ -236,23 +236,23 @@ For example : jdk-8uXXX-macosx-x64.dmg
 \label{fig:Java_mac}
 \end{figure}
 
-\subsection{Eclipse\_Mobots}
+\subsection{Eclipse\_e-puck2}
 
 \begin{enumerate}
-\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_Mobots package for Mac.
-\item Open the .dmg file downloaded and DragAndDrop the Eclipse\_Mobots.app into the Applications folder
+\item Go to the moodle of the course (Microinformatique) and download the Eclipse\_e-puck2 package for Mac.
+\item Open the .dmg file downloaded and DragAndDrop the Eclipse\_e-puck2.app into the Applications folder
 
-Note : You can place the Eclipse\_Mobots.app anywhere, as long a the full path to it doesn't contain any space, if you don't want it to be in Applications.
-\item You can create an Alias to Eclipse\_Mobots.app and place it anywhere if you want.
+Note : You can place the Eclipse\_e-puck2.app anywhere, as long a the full path to it doesn't contain any space, if you don't want it to be in Applications.
+\item You can create an Alias to Eclipse\_e-puck2.app and place it anywhere if you want.
 \end{enumerate}
 
 \subsection{First launch and Gatekeeper}
 
-It's very likely that Gatekeeper (one of the protectons of Mac OS) will prevent you to launch Eclipse\_Mobots.app because it isn't signed from a known developper. 
+It's very likely that Gatekeeper (one of the protectons of Mac OS) will prevent you to launch Eclipse\_e-puck2.app because it isn't signed from a known developper. 
 
 If you can't run the program because of a warning of the system. Press OK and try to launch it by right clicking on it and choosing "open" in the contextual menu (may be slow to open the first time).
 
-If « Unable to open "Eclipse\_Mobots.app" because this app comes from an unidentified developer. »  
+If « Unable to open "Eclipse\_e-puck2.app" because this app comes from an unidentified developer. »  
 
 or if « "Eclipse.app" is corrupted and can not be opened. You should place this item in the Trash. »
 
@@ -289,15 +289,15 @@ This procedure is only needed the first time. After that Gatekeeper will remembe
 \textbf{Important things to avoid :}
 
 \begin{enumerate}
-\item The path to the Eclipse\_Mobots.app must contain zero space. 
+\item The path to the Eclipse\_e-puck2.app must contain zero space. 
 
 Example :
 
-/home/student/epfl\_stuff/Eclipse\_mobots OK   OK
+/home/student/epfl\_stuff/Eclipse\_e-puck2 OK   OK
 
-/home/student/epfl stuff/Eclipse\_mobots NOT OK
+/home/student/epfl stuff/Eclipse\_e-puck2 NOT OK
 
-\item The file's structure in the Eclipse\_Mobots.app must remains the same. It means no file inside this app must be moved to another place.
+\item The file's structure in the Eclipse\_e-puck2.app must remains the same. It means no file inside this app must be moved to another place.
 \end{enumerate}
 
 \end{document}

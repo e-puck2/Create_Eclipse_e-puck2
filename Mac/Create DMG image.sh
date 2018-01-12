@@ -11,27 +11,27 @@ echo
 echo You can drag and drop every file of folder in the terminal to 
 echo give their path
 echo
-echo Enter the path to the folder containing the Eclipse_Mobots folder
+echo Enter the path to the folder containing the Eclipse_e-puck2 folder
 echo and press [ENTER]
 
 read installation_dir
 
 echo
 echo Creating the image
-cp $current_dir/Eclipse_Mobots_Model.sparseimage $installation_dir/
+cp $current_dir/Eclipse_e-puck2_Model.sparseimage $installation_dir/
 
-hdiutil mount $installation_dir/Eclipse_Mobots_Model.sparseimage
+hdiutil mount $installation_dir/Eclipse_e-puck2_Model.sparseimage
 
-cp -R $installation_dir/Eclipse_Mobots/Eclipse_Mobots.app /Volumes/Eclipse_Mobots
-cp $installation_dir/Eclipse_Mobots/ReadMe.txt /Volumes/Eclipse_Mobots
+cp -R $installation_dir/Eclipse_e-puck2/Eclipse_e-puck2.app /Volumes/Eclipse_e-puck2
+cp $installation_dir/Eclipse_e-puck2/ReadMe.txt /Volumes/Eclipse_e-puck2
 
-hdiutil eject "/Volumes/Eclipse_Mobots"
+hdiutil eject "/Volumes/Eclipse_e-puck2"
 
 echo
 echo Compressing the image
-hdiutil convert -format UDZO -o $installation_dir/Eclipse_Mobots_Mac.dmg $installation_dir/Eclipse_Mobots_Model.sparseimage
+hdiutil convert -format UDZO -o $installation_dir/Eclipse_e-puck2_Mac.dmg $installation_dir/Eclipse_e-puck2_Model.sparseimage
 
-rm $installation_dir/Eclipse_Mobots_Model.sparseimage
+rm $installation_dir/Eclipse_e-puck2_Model.sparseimage
 
 echo
 echo Finished
