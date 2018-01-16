@@ -10,7 +10,7 @@ gvfs-set-attribute -t string $dir/Eclipse_e-puck2 metadata::custom-icon file:///
 #below is the line changed by the script
 export PATH=$dir/Tools/gcc-arm-none-eabi-5_4-2016q3/bin:$PATH
 
-export PATH=/usr/lib/jvm/java-8-openjdk-i386/bin:$PATH
 export PATH=/usr/lib/jvm/java-8-openjdk/bin:$PATH
+export PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH
 
 eclipse/eclipse -data Workspace
