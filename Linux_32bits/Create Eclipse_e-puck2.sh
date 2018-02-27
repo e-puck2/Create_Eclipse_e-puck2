@@ -68,7 +68,7 @@ echo arm-none-eabi copied
 
 echo
 echo Installing the Hardware Debugging plugin
-echo Please authorize the opening of Ecipse if asked
+echo Please authorize the opening of Eclipse if asked
 
 $installation_dir/Eclipse_e-puck2/eclipse/eclipse \
 -clean -purgeHistory \
