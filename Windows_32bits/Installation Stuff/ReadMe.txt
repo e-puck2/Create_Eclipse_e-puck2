@@ -15,7 +15,7 @@ Next you can create a shortcut of Eclipse_e-puck2.exe if you want.
 
 **To be able to run Eclipse, Java 32bits needs to be installed.
 
---To install Java 32bits
--Go to https://www.java.com/en/download/manual.jsp
-and download "Windows offline".
--Then execute the downloaded executable and follow the instructions.
+--To install OpenJDK 8 32bits
+-Go to https://adoptopenjdk.net/releases.html
+and download the openJDK 8 (LTS) HotSpot for Windows x86 JDK (take the installer, aka. .msi file).
+-Then execute the downloaded installer and follow the instructions.

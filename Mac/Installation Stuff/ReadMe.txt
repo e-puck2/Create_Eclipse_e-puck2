@@ -6,11 +6,11 @@ Also avoid special characters.
 Example : 	/home/student/epfl_stuff/Eclipse_e-puck2	OK
 		/home/student/epfl stuff/Eclipse_e-puck2	NOT OK
 
-**To be able to run Eclipse, Java 8 SDK must be installed.
+**To be able to run Eclipse, Java 8 JDK must be installed.
 
-—-To install Java 8 SDK :
--Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-and download the Mac OS X Java 8 SE Development Kit
+—-To install OpenJDK 8 JDK :
+-Go to https://adoptopenjdk.net/releases.html
+and download the openJDK 8 (LTS) HotSpot for MacOS x64 JDK (take the installer, aka. .pkg file)
 -Open the downloaded .dmg file, execute the installer and follow the instructions
 
 —-To launch Eclipse the First time :
