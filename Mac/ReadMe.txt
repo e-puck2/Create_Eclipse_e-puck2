@@ -47,7 +47,8 @@ Execute the script « Create Eclipse_e-puck2.sh » or follow the instructions 
 7)	Download arm-none-eabi toolchain and unzip it into the Tools folder of the
 	Eclipse_e-puck2.app 
 	Eclipse_e-puck2.app -> Contents -> Eclipse_e-puck2 -> Tools
-8)	Open the Eclipse_e-puck2 script with a text editor and verify if the paths are 	correct for your installation.
+8)	Open the Eclipse_e-puck2 script with a text editor and verify if the paths are
+	correct for your installation.
 9)	Execute Eclipse_e-puck2.app and install thought the menu 
 	« Help -> Install new software » the plugin C/C++ GDB Hardware Debugging 
 	located in CDT Optional Features
