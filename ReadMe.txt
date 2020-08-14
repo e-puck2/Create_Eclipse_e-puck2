@@ -8,10 +8,10 @@ It is composed of:
 
 Content of Eclipse (all platforms)
 
--Eclipse IDE for C/C++ Developers (Oxygen 4.7.2)
+-Eclipse IDE for C/C++ Developers 2020 06 R
 -Plugins
---C/C++ GDB Hardware Debugging
---EmbSysRegView 0.2.6 (with custom SVD)
+--C/C++ GDB Hardware Debugging 9.11
+--EmbSysRegView 0.2.6 (with custom SVD for STM32F407, 413 and STM32F7XX)
 —-ChibiOs board config generator tool 1.10.1 (with custom template aka. stm32f4xx_e-puck2)
 
 Configuration made into Eclipse (kept in the Workspace)
