@@ -74,7 +74,7 @@ $installation_dir/Eclipse_e-puck2/eclipse/eclipse \
 -clean -purgeHistory \
 -application org.eclipse.equinox.p2.director \
 -noSplash \
--repository http://download.eclipse.org/tools/cdt/releases/9.3 \
+-repository http://download.eclipse.org/tools/cdt/releases/9.11 \
 -installIUs org.eclipse.cdt.debug.gdbjtag.feature.group
 if [ $? -ne 0 ]; then
     exit
