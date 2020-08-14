@@ -15,7 +15,7 @@ Next you can create a shortcut of Eclipse_e-puck2.exe if you want.
 
 **To be able to run Eclipse, Java 32bits needs to be installed.
 
---To install OpenJDK 8 32bits
+--To install OpenJDK 8 64bits
 -Go to https://adoptopenjdk.net/releases.html
-and download the openJDK 8 (LTS) HotSpot for Windows x86 JDK (take the installer, aka. .msi file).
+and download the openJDK 8 (LTS) HotSpot for Windows x64 JDK (take the installer, aka. .msi file).
 -Then execute the downloaded installer and follow the instructions.
